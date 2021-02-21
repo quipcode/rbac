@@ -19,6 +19,7 @@ import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 
 
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
+import org.springframework.web.client.RestTemplate;
 import rbac.server.security.jwt.AuthEntryPointJwt;
 import rbac.server.services.UserDetailsServiceImpl;
 import rbac.server.security.jwt.AuthTokenFilter;
@@ -38,6 +39,11 @@ public class SecurityConfig  extends WebSecurityConfigurerAdapter{
     @Bean
     public AuthTokenFilter authenticationJwtTokenFilter() {
         return new AuthTokenFilter();
+    }
+
+    @Bean
+    public RestTemplate restTemplate() {
+        return new RestTemplate();
     }
 
     @Bean
