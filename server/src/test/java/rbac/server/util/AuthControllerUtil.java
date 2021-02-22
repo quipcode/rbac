@@ -14,12 +14,16 @@ public class AuthControllerUtil {
 
     public static final String CORRECT_PASSWORD = "password";
     public static final String CORRECT_USERNAME = "user";
+    public static final String CORRECT_EMAIL = "user@rbac.com";
 
     public static final String INCORRECT_PASSWORD = "password1";
     public static final String INCORRECT_USERNAME = "user1";
+    public static final String INCORRECT_EMAIL = "user1@rbac.com";
 
     public static final String REQUEST_PARAMETER_PASSWORD = "password";
     public static final String REQUEST_PARAMETER_USERNAME = "username";
+    public static final String REQUEST_PARAMETER_EMAIL = "email";
+
 
     public static byte[] convertObjectToJsonBytes(Object object) throws IOException {
         ObjectMapper mapper = new ObjectMapper();

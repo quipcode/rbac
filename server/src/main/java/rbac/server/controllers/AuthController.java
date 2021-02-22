@@ -6,6 +6,8 @@ import java.util.List;
 import java.util.Set;
 import java.util.stream.Collectors;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,8 +15,6 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
-import org.springframework.security.core.GrantedAuthority;
-import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -26,14 +26,12 @@ import org.springframework.web.bind.annotation.RestController;
 import rbac.server.models.ERole;
 import rbac.server.models.Role;
 import rbac.server.models.User;
-import rbac.server.models.Permission;
 import rbac.server.payload.request.LoginRequest;
 import rbac.server.payload.request.SignupRequest;
 import rbac.server.payload.response.JwtResponse;
 import rbac.server.payload.response.MessageResponse;
 import rbac.server.repository.security.UserRepository;
 import rbac.server.repository.security.RoleRepository;
-import rbac.server.repository.security.PermissionRepository;
 import rbac.server.security.jwt.JwtUtils;
 import rbac.server.services.UserDetailsImpl;
 
@@ -133,5 +131,6 @@ public class AuthController {
         userRepository.save(user);
         return ResponseEntity.ok(new MessageResponse("User registered successfully"));
     }
+
 
 }
