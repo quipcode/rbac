@@ -16,7 +16,7 @@ import styles from './styles'
 
 // App Imports
 import routes from '../../../../scheme/routes'
-import params from '../../../../scheme/config/params'
+import params from '../../../../scheme/config/params.json'
 import { messageShow } from '../api/actions'
 import { logout } from '../../user/api/actions/query'
 

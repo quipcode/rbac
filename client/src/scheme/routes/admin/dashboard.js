@@ -1,5 +1,5 @@
 // App Imports
-import params from '../../../scheme/config/params'
+import params from '../../../scheme/config/params.json'
 import Dashboard from '../../../modules/core/admin/dashboard/Dashboard'
 
 // Admin dashboard routes

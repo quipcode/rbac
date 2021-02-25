@@ -47,7 +47,7 @@ const Message = ({ }) => {
 
 // Component Properties
 Message.propTypes = {
-    common: PropTypes.object.isRequired,
+    base: PropTypes.object.isRequired,
 }
 
 export default Message

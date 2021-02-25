@@ -1,6 +1,6 @@
 // App Imports
 import { API_URL } from '../config/env'
-import params from '../config/params'
+import params from '../config/params.json'
 import pages from './pages'
 import user from './user'
 import admin from './admin'
